@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modal Page</title>
-    <link rel="stylesheet" href="./Assets/css/style.css">
+    <link rel="stylesheet" href="foundation/css/foundation.css">
+    <link rel="stylesheet" href="foundation/css/app.css">
 </head>
 <body>
     <div class="container">
         <h1>Welcome to the Waiting Room</h1>
-        <button id="enterBtn">Enter</button>
+        <a href="#" class="button" id="enterBtn">Enter</a>
     </div>
 
     <!-- Modal -->
@@ -17,13 +18,13 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <p>Select all that apply to you:</p>
-            <input type="checkbox" id="option1" name="options" value="Option 1">
-            <label for="option1">Red Eyes</label><br>
+            <input id="checkbox1" type="checkbox"><label for="checkbox1">Red Eyes</label>
+
             <input type="checkbox" id="option2" name="options" value="Option 2">
             <label for="option2">Sneezing</label><br>
             <input type="checkbox" id="option3" name="options" value="Option 3">
             <label for="option3">Fatigue</label><br>
-            <button id="modalSubmit">Submit</button>
+            <a href="#" class = "button" id="modalSubmit">Submit</a>
         </div>
     </div>
 
