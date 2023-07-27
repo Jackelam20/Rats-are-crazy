@@ -7,46 +7,121 @@
     <title>Modal Page</title>
     <link rel="stylesheet" href="./foundation/css/foundation.css">
     <link rel="stylesheet" href="./foundation/css/app.css">
-    <link rel="stylesheet" href="./foundation/css/app.css">
 </head>
+
 <body>
 
     <div id="landing-page" class="grid-container">
-        <div class="grid-x grid-padding-x"></div>
-        <div class="cell text-center">
-            <h1 class = "text-center">Welcome to the Waiting Room</h1>
-            <a href="#" class="button" id="enterBtn">Enter</a>
+        <div class="grid-x grid-padding-x">
+            <div class="cell text-center">
+                <h1 class="text-center">Welcome to the Waiting Room</h1>
+            </div>
         </div>
-        
-        <div class="card grid-container text-center" style="width: 800px;">
-            <!--NEED to center this top part of card-->
+        <div class="cell text-center">
+            <button class="button" id="enterBtn">Click Here to Submit Form and Enter</button>
+        </div>
+
+        <div class="card grid-container text-center" style="width: 800px; margin: 0 auto;">
             <div class="card-divider grid-x grid-padding-x">
-              <h4 class="text-center">Disclaimer</h4>
+                <h4 class="text-center">Disclaimer</h4>
             </div>
             <div class="card-section">
-              <p>This is not professional medical advice. This is a tool to help one learn more about their allergens so that they can better advocate for themselves at their doctor's appointment and take precautions to mitigate symptoms until they can see a doctor</p>
+                <p>This is not professional medical advice. This is a tool to help one learn more about their allergens
+                    so that they can better advocate for themselves at their doctor's appointment and take precautions
+                    to mitigate symptoms until they can see a doctor</p>
             </div>
-         </div>
-
-    </div>
-
-
-        <div id="resultContainer" class="container" style="display: none;">
-            <h1>Results Page</h1>
-            <p>The following options were selected:</p>
-            <div id="selectedOptions" class="options-list"></div>
-            <p>Here's an image of a cat in bed:</p>
-            <img src="https://placekitten.com/400/300" alt="Cat in Bed">
         </div>
-
-   
     </div>
 
+    <div id="modalContainer" class="modal">
+        <div class="modal-content">
+            <h2>Air Quality Allergen Concerns</h2>
+            <div class="category">
+                <h4>Indoor</h4>
+                <ul class="optionsList">
+                    <li>
+                        <label>
+                            <input type="checkbox" name="indoor_option1" value="Dust Mites"> Dust Mites
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="indoor_option2" value="Mold"> Mold
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="indoor_option3" value="Pet Dander"> Pet Dander
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="category">
+                <h4>Outdoor</h4>
+                <ul class="optionsList">
+                    <li>
+                        <label>
+                            <input type="checkbox" name="outdoor_option1" value="Cedar"> Cedar
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="outdoor_option2" value="Oak"> Oak
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="outdoor_option3" value="Grass"> Grass
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="outdoor_option4" value="Ragweed"> Ragweed
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="outdoor_option5" value="Flowers"> Flowers
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="category">
+                <h4>Other</h4>
+                <ul class="optionsList">
+                    <li>
+                        <label>
+                            <input type="checkbox" name="other_option1" value="Industrial Sources"> Industrial Sources
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="other_option2" value="Cockroach Allergens"> Cockroach Allergens
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="other_option3" value="Respiratory Irritants"> Respiratory Irritants
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <button class="button" id="submitModalBtn">Submit</button>
+            <button class="close-button" id="closeModalBtn">&times;</button>
+        </div>
+    </div>
+
+    <div id="resultContainer" class="container" style="display: none;">
+        <h1>Some information based on your selection...</h1>
+        <div id="selectedOptions" class="flex-container inline-list"></div> <!-- Use the flex-container class from Foundation -->
+        <img src="https://placekitten.com/400/300" alt="Cat in Bed">
+    </div>
 
     <script src="./foundation/js/vendor/jquery.js"></script>
     <script src="./foundation/js/vendor/what-input.js"></script>
     <script src="./foundation/js/vendor/foundation.js"></script>
     <script src="./foundation/js/app.js"></script>
+    
 </body>
 
 </html>
