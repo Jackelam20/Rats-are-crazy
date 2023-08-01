@@ -36,3 +36,6 @@ Use client-side storage to store persistent data.
 Be responsive.
 Have a polished UI.
 Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class/id naming conventions, indentation, quality comments, and so on).
+
+## Resources
+https://www.iqair.com/air-pollution-data-api

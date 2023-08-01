@@ -104,3 +104,45 @@ body {
     display: inline-block;
     margin-right: 40px; Adjust the spacing between items as needed 
   } */ 
+
+  /* Style for the selected options container */
+.selected-options-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style for each selected option */
+  .selected-option {
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 3px;
+  }
+  .selected-options-wrapper {
+    background-color: #f3f3f3; /* Gray background color */
+    padding: 10px; /* Add some padding to create spacing between elements */
+    border-radius: 5px; /* Add rounded corners for a nicer look */
+    margin-top: 10px; /* Optional: Add some margin to separate from the previous element */
+    flex: 1;  
+}
+
+  /* Add these styles to your existing CSS or in a separate file */
+#resultWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  
+  .fetched-data-container {
+    flex: 1;
+    background-color: lightpurple;
+    padding: 10px;
+    margin-left: 20px; /* Add some space between the two containers */
+  }
