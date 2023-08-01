@@ -8,7 +8,7 @@ This application was created to provide users with information relevant to their
 As someone with aeroallergens, I want to access data relevant to my allergy concerns, so that I can better advocate for myself at my doctor's appointment and take precautions to mitigate symptoms until I can see my doctor.
 
 ## Installation:
-No installation required. Simply visit the deployed application at *link here*
+No installation required. Simply visit the deployed application at https://jackelam20.github.io/Rats-are-crazy/
 
 ## Usage:
 TO USE THIS APPLICATION: start by selecting the allergy that is most relevant to you. Once you have selected your allergy, click the submit button. You will be presented with a wiki article relevant to your allergy and a widget of your area with air quality data. 
@@ -20,7 +20,15 @@ TO USE THIS APPLICATION: start by selecting the allergy that is most relevant to
 ## Credits:
 This application was created by the following developers
 
-Jack Elam:@jackelam20(github)
+Chris Llanos: @chrisllanos(github)
+
+Kate Sterchi: @k8stechi(github)
+
+Jack Elam: @jackelam20(github)
+
+Abdul Al adhami: @abdulaze19(github)
+
+Christian Diehl: @cdiehl4(github)
 
 
 ## Features:
@@ -29,11 +37,17 @@ this application features a landing page with a disclaimer, a modal with a form,
 ## Acceptance Criteria:
 WHEN I Load the page,
 
-THEN I find a landing page and a disclaimer
+THEN I find a landing page and a disclaimer and a button
+
+WHEN I click the button to enter the site,
+
+THEN I find a modal with a form
 
 WHEN I select the information relevant to me,
 
-THEN I find a wiki article and information about air quality
+THEN I find a infomative page that uses two APIs to provide me with information relevant to my allergy concerns
+
+
 
 
 ## MVP:
@@ -49,5 +63,7 @@ Have a clean repository that meets quality coding standards (file structure, nam
 
 ## Resources
 https://www.iqair.com/air-pollution-data-api
+
 https://get.foundation/building-blocks/forms.html
+
 https://www.mediawiki.org/wiki/API:Main_page
