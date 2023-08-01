@@ -1,4 +1,4 @@
-$(document).foundation();
+$(document).foundation(); 
 
 //base url to append query
 const wikiUrl =  "https://en.wikipedia.org/w/api.php?action=query&origin=*&titles=";
@@ -41,31 +41,33 @@ function displayWiki(option){
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  const enterBtn = document.getElementById("enterBtn");
-  const modalContainer = document.getElementById("modalContainer");
-  const submitModalBtn = document.getElementById("submitModalBtn");
-  const resultContainer = document.getElementById("resultContainer");
-  const selectedOptionsContainer = document.getElementById("selectedOptionsContainer");
-  const wikiPage = document.getElementById("wikiP");
-
-  // Event listener to open the modal when the "Enter" button is clicked
-  enterBtn.addEventListener("click", function () {
-    modalContainer.style.display = "block";
-  });
-
+    const enterBtn = document.getElementById("enterBtn");
+    const modalContainer = document.getElementById("modalContainer");
+    const closeModalBtn = document.getElementById("closeModalBtn");
+    const submitModalBtn = document.getElementById("submitModalBtn");
+    const resultContainer = document.getElementById("resultContainer");
+    const selectedOptionsContainer = document.getElementById("selectedOptionsContainer");
+    const wikiPage = document.getElementById("wikiP");
+    
+  
+    // Event listener to open the modal when the "Enter" button is clicked
+    enterBtn.addEventListener("click", function () {
+      modalContainer.style.display = "block";
+    });
+  
   // Event listener to close the modal when the "submit" button is clicked
   submitModalBtn.addEventListener("click", function () {
-    modalContainer.style.display = "none";
-  });
-
-  // Event listener to show selected options and fetch air quality data when the "Submit" button is clicked
-  submitModalBtn.addEventListener("click", function () {
-    const selectedOptions = [];
-    const checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
-
-    checkboxes.forEach((checkbox) => {
-      selectedOptions.push(checkbox.value);
+      modalContainer.style.display = "none";
     });
+  
+  // Event listener to show selected options and fetch air quality data when the "Submit" button is clicked
+    submitModalBtn.addEventListener("click", function () {
+      const selectedOptions = [];
+      const checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
+  
+      checkboxes.forEach((checkbox) => {
+        selectedOptions.push(checkbox.value);
+      });
 
     if (selectedOptions.length > 0) {
       // Hide the landing page and modal
@@ -82,23 +84,8 @@ document.addEventListener("DOMContentLoaded", function () {
         selectedOptionDiv.classList.add("selected-option");
         selectedOptionDiv.textContent = option;
         selectedOptionsContainer.appendChild(selectedOptionDiv);
+        displayWiki(option);
       });
-  
-      if (selectedOptions.length > 0) {
-        // Hide the landing page and modal
-        document.getElementById("landing-page").style.display = "none";
-        modalContainer.style.display = "none";
-  
-        // Show the results page
-        resultContainer.style.display = "block";
-  
-        // Display the selected options on the results page
-        selectedOptionsDiv.innerHTML = "";
-        selectedOptions.forEach((option) => {
-          selectedOptionsDiv.innerHTML += `<p>${option}</p>`;
-          displayWiki(option);
-
-        });
 
       } else {
         alert("Please select at least one option before submitting.");
@@ -131,10 +118,4 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch((error) => {
           console.error("Error fetching air quality data:", error);
         });
-    } else {
-      alert("Please select at least one option before submitting.");
-    }
-  });
-});
-
-
+      });
