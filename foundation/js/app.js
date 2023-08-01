@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Fetch air quality data from the API
       const apiKey = "60016002-4723-4a3c-bb9f-deeef5f6e896"; 
-      fetch(`http://api.airvisual.com/v2/nearest_city?key=${apiKey}`)
+      fetch(`https://api.airvisual.com/v2/nearest_city?key=${apiKey}`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Network response was not ok");
