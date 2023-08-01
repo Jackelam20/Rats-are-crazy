@@ -20,13 +20,13 @@ var wikiFormat = {
 
 function strip(html){
   let doc = new DOMParser().parseFromString(html, 'text/html');
-  return doc.body.textContent || "";
+  return doc.body;
 }
 
 function displayWiki(option){
     sampleOption = wikiFormat[option];
     var completeUrl = wikiUrl+sampleOption+endpointLast;
-    console.log(sampleOption);
+    //console.log(sampleOption);
     fetch(completeUrl)
       .then(function(response){
         return response.json();
@@ -34,7 +34,11 @@ function displayWiki(option){
       .then(function(data){
         var page = data.query.pages
         var pageId = Object.keys(data.query.pages)[0];
-        console.log(strip(page[pageId].extract));
+        const fetchedwikiDataContainer = document.getElementById("fetched-wiki-data");
+        //var wikiText = strip(page[pageId].extract);
+
+        fetchedwikiDataContainer.appendChild(strip(page[pageId].extract))
+
       })
              
 }
@@ -78,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
       resultContainer.style.display = "block";
       const selectedOptionsContainer = document.getElementById("selectedOptionsContainer");
       selectedOptionsContainer.innerHTML = ""; // Clear previous selections
-  
+      console.log(selectedOptions);
       selectedOptions.forEach((option) => {
         const selectedOptionDiv = document.createElement("div");
         selectedOptionDiv.classList.add("selected-option");
