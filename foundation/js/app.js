@@ -15,7 +15,12 @@ var wikiFormat = {
   "Flowers" : "Flower",
   "Latex Allergy" : "Latex_allergy",
   "Cockroach Allergens" : "Cockroach",
-  "Respiratory Irritants" : "Irritation"
+  "Respiratory Irritants" : "Irritation",
+  "Red Eyes" : "Red_eye_(medicine)",
+  "Sneezing" : "Sneeze",
+  "Fatigue" : "Fatigue",
+  "Runny Nose" : "Rhinorrhea",
+  "Swelling" : "Edema"
 };
 
 function strip(html){
