@@ -1,9 +1,30 @@
 # The Waiting Room
 ## Description
-This application enables the user to select keywords relevant to their allergy concerns that, once submitted, generate an interactive information page customized according to the user's input. To create an intuitive application that dynamically updates, this application utilizes server side APIs and Foundation for CSS styling. 
+This application was created to provide users with information relevant to their allergy concerns. The Waiting Room is a single page application that utilizes the MediaWiki API and the IQAir API to provide users with a wiki article and air quality data relevant to their allergy concerns. This application enables the user to select keywords relevant to their allergy concerns that, once submitted, generate an interactive information page customized according to the user's input. To create an intuitive application that dynamically updates, this application utilizes server side APIs and Foundation for CSS styling.
+
+***DISClAIMER: This application is not intended to replace medical advice. Please consult your doctor for medical advice.***
 
 ## User Story:
 As someone with aeroallergens, I want to access data relevant to my allergy concerns, so that I can better advocate for myself at my doctor's appointment and take precautions to mitigate symptoms until I can see my doctor.
+
+## Installation:
+No installation required. Simply visit the deployed application at *link here*
+
+## Usage:
+TO USE THIS APPLICATION: start by selecting the allergy that is most relevant to you. Once you have selected your allergy, click the submit button. You will be presented with a wiki article relevant to your allergy and a widget of your area with air quality data. 
+
+![The Waiting Room](./screenshots/landing-page.png)
+![how can we help you](./screenshots/modal-selection.png)
+![heres the info](./screenshots/results-page.png)
+
+## Credits:
+This application was created by the following developers
+
+Jack Elam:@jackelam20(github)
+
+
+## Features:
+this application features a landing page with a disclaimer, a modal with a form, and a results page with a wiki article and air quality data.
 
 ## Acceptance Criteria:
 WHEN I Load the page,
@@ -14,17 +35,6 @@ WHEN I select the information relevant to me,
 
 THEN I find a wiki article and information about air quality
 
-WHEN I view recent searches
-
-THEN I find past searched articles on the subject
-
-WHEN I reload the page
-
-THEN I see an updated recent searches
-
-WHEN I click on advice to prevent allergies
-
-THEN I am presented with a page that discusses how to help prevent both indoor and outdoor allergies
 
 ## MVP:
 Use a CSS framework other than Bootstrap.
@@ -39,3 +49,5 @@ Have a clean repository that meets quality coding standards (file structure, nam
 
 ## Resources
 https://www.iqair.com/air-pollution-data-api
+https://get.foundation/building-blocks/forms.html
+https://www.mediawiki.org/wiki/API:Main_page
