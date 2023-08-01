@@ -1,6 +1,6 @@
 # The Waiting Room
 ## Description
-Add short discription here. 
+This application enables the user to select keywords relevant to their allergy concerns that, once submitted, generate an interactive information page customized according to the user's input. To create an intuitive application that dynamically updates, this application utilizes server side APIs and Foundation for CSS styling. 
 
 ## User Story:
 As someone with aeroallergens, I want to access data relevant to my allergy concerns, so that I can better advocate for myself at my doctor's appointment and take precautions to mitigate symptoms until I can see my doctor.
@@ -36,3 +36,6 @@ Use client-side storage to store persistent data.
 Be responsive.
 Have a polished UI.
 Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class/id naming conventions, indentation, quality comments, and so on).
+
+## Resources
+https://www.iqair.com/air-pollution-data-api
